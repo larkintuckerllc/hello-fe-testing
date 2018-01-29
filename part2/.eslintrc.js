@@ -3,9 +3,6 @@ module.exports = {
     'airbnb',
     'plugin:jest/recommended',
   ],
-  plugins: [
-    'jest',
-  ],
   env: {
     browser: true,
   },
