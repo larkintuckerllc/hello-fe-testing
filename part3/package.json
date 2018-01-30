@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "watch 'clear; node_modules/.bin/eslint --ext .js --ext .jsx src/Calculator' src/Calculator"
+    "lint": "watch 'clear; node_modules/.bin/eslint --ext .js --ext .jsx src/MyApp' src/MyApp"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
