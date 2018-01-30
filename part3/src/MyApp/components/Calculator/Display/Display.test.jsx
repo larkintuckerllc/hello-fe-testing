@@ -4,6 +4,9 @@ import Adapter from 'enzyme-adapter-react-16';
 import { Display } from '../Display';
 
 Enzyme.configure({ adapter: new Adapter() });
-it('shallow renders without crashing', () => {
-  shallow(<Display number={0} setFirst={() => {}} />);
+it('shallow renders with number without crashing', () => {
+  shallow(<Display first={1} />);
+});
+it('shallow renders with null without crashing', () => {
+  shallow(<Display first={null} />);
 });
