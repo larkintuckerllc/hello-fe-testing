@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as fromFirst from '../../../ducks/first';
 
-function Display({ first }) {
+export function Display({ first }) {
   return (
     <div>{first !== null && first}</div>
   );
