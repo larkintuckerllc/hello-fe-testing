@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import * as fromFirst from '../../../ducks/first';
 
 function Display({ first }) {
   return (
@@ -12,4 +14,9 @@ Display.propTypes = {
 Display.defaultProps = {
   first: null,
 };
-export default Display;
+export default connect(
+  state => ({
+    first: fromFirst.getFirst(state),
+  }),
+  null,
+)(Display);
