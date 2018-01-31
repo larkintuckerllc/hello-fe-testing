@@ -6,6 +6,7 @@ import * as fromFirst from '../../../ducks/first';
 export function Button({ number, setFirst }) {
   return (
     <button
+      className="calculator__button"
       onClick={() => setFirst(number)}
     >
       {number.toString()}

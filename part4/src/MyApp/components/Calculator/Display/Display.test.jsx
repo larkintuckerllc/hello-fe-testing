@@ -4,11 +4,25 @@ import Adapter from 'enzyme-adapter-react-16';
 import { Display } from '../Display';
 
 Enzyme.configure({ adapter: new Adapter() });
-describe('shallow renders without crashing', () => {
-  it('shallow renders without crashing with number', () => {
-    shallow(<Display first={1} />);
+const setup = (propOverrides) => {
+  const props = {
+    ...propOverrides,
+  };
+  return ({
+    props,
+    wrapper: shallow(<Display{...props} />),
   });
-  it('shallow renders without crashing with null', () => {
-    shallow(<Display first={null} />);
+};
+describe('Display component', () => {
+  describe('shallow renders without crashing', () => {
+    it('with first property undefined', () => {
+      setup({});
+    });
+    it('with first property number', () => {
+      setup({ first: 1 });
+    });
+    it('with first property null', () => {
+      setup({ first: null });
+    });
   });
 });

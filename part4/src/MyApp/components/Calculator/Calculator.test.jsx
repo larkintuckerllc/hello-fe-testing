@@ -4,6 +4,17 @@ import Adapter from 'enzyme-adapter-react-16';
 import Calculator from '../Calculator';
 
 Enzyme.configure({ adapter: new Adapter() });
-it('shallow renders without crashing', () => {
-  shallow(<Calculator />);
+const setup = (propOverrides) => {
+  const props = {
+    ...propOverrides,
+  };
+  return ({
+    props,
+    wrapper: shallow(<Calculator{...props} />),
+  });
+};
+describe('Calculator component', () => {
+  it('shallow renders without crashing', () => {
+    setup({});
+  });
 });
