@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 import React from 'react';
 import Button from './Button';
 import Display from './Display';
